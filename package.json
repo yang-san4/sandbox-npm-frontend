@@ -2,6 +2,12 @@
   "name": "npm-frontend-sandbox",
   "version": "1.0.0",
   "description": "",
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ysztnk4/npm-frontend-sandbox"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,8 +22,6 @@
     "serve": "browser-sync start --server -- serveStatic dist --files 'dist/styles/*.css, dist/scripts/*.jss, **/*.html'",
     "watch": "npm run serve & npm run watch:css & npm run watch:js"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "babel-eslint": "^7.1.1",
     "babel-preset-es2015": "^6.22.0",
