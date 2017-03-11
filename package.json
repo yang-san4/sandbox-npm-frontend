@@ -13,7 +13,8 @@
     "bundle:js": "mkdirp dist/scripts && npm run browserify && npm run uglify",
     "lint:css": "stylelint 'src/styles/**/*css'",
     "lint:js": "eslint src/scripts",
-    "serve": "browser-sync start --server -- serveStatic dist --files 'dist/styles/*.css, dist/scripts/*.jss, **/*.html'"
+    "serve": "browser-sync start --server -- serveStatic dist --files 'dist/styles/*.css, dist/scripts/*.jss, **/*.html'",
+    "watch": "npm run serve & npm run watch:css & npm run watch:js"
   },
   "author": "",
   "license": "ISC",
