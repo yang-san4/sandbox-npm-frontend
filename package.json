@@ -24,6 +24,8 @@
     "eslint": "^3.17.1",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
     "exorcist": "^0.4.0",
     "mkdirp": "^0.5.1",
     "postcss-cli": "^3.0.0-beta",
