@@ -6,12 +6,23 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "postcss --config .postcssrc.json --dir dist/styles/ src/styles/*.css",
-    "watch:css": "npm run build:css -- --watch --map"
+    "watch:css": "npm run build:css -- --watch --map",
+    "watch:js": "watchify --entry src/scripts/app.js --transform babelify --outfile 'exorcist dist/scripts/bundle.js.map > dist/scripts/bundle.js' --debug --verbose",
+    "browserify": "browserify --entry src/scripts/app.js --transform babelify > dist/scripts/bundle.js",
+    "uglify": "uglifyjs --compress warnings=false --mangle --output dist/scripts/bundle.min.js -- dist/scripts/bundle.js",
+    "bundle:js": "mkdirp dist/scripts && npm run browserify && npm run uglify"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.1.0",
+    "exorcist": "^0.4.0",
+    "mkdirp": "^0.5.1",
     "postcss-cli": "^3.0.0-beta",
-    "postcss-import": "^9.1.0"
+    "postcss-import": "^9.1.0",
+    "uglify-js": "^2.8.12",
+    "watchify": "^3.9.0"
   }
 }
