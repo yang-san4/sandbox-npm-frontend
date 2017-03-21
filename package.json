@@ -20,7 +20,8 @@
     "lint:css": "stylelint 'src/styles/**/*css'",
     "lint:js": "eslint src/scripts",
     "serve": "browser-sync start --server -- serveStatic dist --files 'dist/styles/*.css, dist/scripts/*.jss, **/*.html'",
-    "watch": "npm run serve & npm run watch:css & npm run watch:js"
+    "watch": "npm run serve & npm run watch:css & npm run watch:js",
+    "webpack": "webpack"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
@@ -40,6 +41,7 @@
     "stylelint": "^7.9.0",
     "stylelint-config-qiita": "^1.0.0",
     "uglify-js": "^2.8.12",
-    "watchify": "^3.9.0"
+    "watchify": "^3.9.0",
+    "webpack": "^2.2.1"
   }
 }
